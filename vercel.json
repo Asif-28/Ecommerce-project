@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "environment": {
+    "builds": {
+      "release": {
+        "legacyPeerDeps": true
+      }
+    }
+  }
+}
