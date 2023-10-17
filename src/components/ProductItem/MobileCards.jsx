@@ -33,7 +33,9 @@ export const MobileCards = () => {
         />
       );
     } else if (media.video) {
-      return <video className="max-h-[335px]" src={media.video} controls />;
+      return (
+        <video className="max-h-[335px] w-full" src={media.video} controls />
+      );
     } else {
       return null;
     }

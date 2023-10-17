@@ -56,16 +56,12 @@ export const ProductPhotos = () => {
                 enlargedImageContainerStyle={{ marginLeft: "10%" }} // Adjust the margin-left value as needed
                 className="bg-black"
                 enlargedImagePosition="over"
-                style={{
-                  marginBottom: ".6rem",
-                }}
                 smallImage={{
                   alt: "Product image",
                   isFluidWidth: true,
                   src: currentImageURL,
                 }}
                 largeImage={{
-                  className: "object-contain",
                   src: currentImageURL,
                   width: 700,
                   height: 600,
