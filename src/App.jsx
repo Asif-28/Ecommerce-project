@@ -17,7 +17,6 @@ function App() {
             <ProductItem />
           </>
         </ProductContextProvider>
-        n
       </SearchContextProvider>
     </CartContextProvider>
   );
