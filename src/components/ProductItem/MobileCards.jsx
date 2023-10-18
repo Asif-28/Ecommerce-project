@@ -1,5 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ProductContext from "../../context/ProductsContext";
 
 export const MobileCards = () => {
   const images = [
@@ -40,22 +41,29 @@ export const MobileCards = () => {
       return null;
     }
   };
-
+  const { textHeader } = useContext(ProductContext);
+  const { menu } = useContext(ProductContext);
   return (
-    <div className="section flex overflow-x-scroll">
+    <div className="section">
       <div className="">
         {!zoomedImage ? (
-          <div className="relative flex flex-row gap-3 overflow-x-scroll overflow-y-clip cont ml-3 pr-3">
-            {images.map((i) => (
-              <div className="min-w-[260px] max-w-[280px]" key={i.id}>
-                {renderMedia(i)}
-              </div>
-            ))}
+          <div>
+            <h1 className="pb-4 text-base mt-[1rem] pl-4 sm:pl-10 font-bold ">
+              {textHeader} &gt; {menu}
+            </h1>
+
+            <div className="relative flex flex-row gap-3 overflow-x-scroll overflow-y-clip cont ml-3 pr-3">
+              {images.map((i) => (
+                <div className="min-w-[260px] max-w-[280px]" key={i.id}>
+                  {renderMedia(i)}
+                </div>
+              ))}
+            </div>
           </div>
         ) : (
           <div className=" w-full  px-4">
             <button
-              className="float-right text-white pr-4 mb-2"
+              className="float-right text-white pr-4 mb-2 mt-2"
               onClick={() => handleCloseZoom()}
             >
               <CloseIcon sx={{ color: "black", fontSize: "2.5rem" }} />
@@ -67,7 +75,3 @@ export const MobileCards = () => {
     </div>
   );
 };
-
-// {zoomedImage && (
-
-// )}
