@@ -6,6 +6,7 @@ import CartContextProvider from "./context/CartContextProvider";
 import { ProductItem } from "./pages/ProductItem/ProductItem";
 import SearchContextProvider from "./context/SearchContextProvider";
 import ProductContextProvider from "./context/ProductContextProvider";
+import Magnify from "./components/ProductItem/Magnify";
 function App() {
   return (
     <CartContextProvider>
@@ -15,6 +16,7 @@ function App() {
             {/* <Homepage />
             <Products /> */}
             <ProductItem />
+            {/* <Magnify /> */}
           </>
         </ProductContextProvider>
       </SearchContextProvider>

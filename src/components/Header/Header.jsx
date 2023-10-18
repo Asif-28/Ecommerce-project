@@ -123,7 +123,7 @@ export const Header = () => {
           >
             {showLanguage}/{showCurrency} <ArrowDropDownOutlinedIcon />
             {hovered && (
-              <div className="absolute top-[3.9rem] bg-white py-2 px-6 shadow-lg">
+              <div className="absolute top-[3.7rem] bg-white py-2 px-6 shadow-lg">
                 <div className="mb-6">
                   <div>
                     <h2 className="mb-2">Language</h2>

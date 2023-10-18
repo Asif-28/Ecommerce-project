@@ -3,7 +3,7 @@ import { useContext, useState, useRef } from "react";
 import ProductContext from "../../context/ProductsContext";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import PauseCircleFilledIcon from "@mui/icons-material/PauseCircleFilled";
-import ReactImageMagnify from "react-image-magnify";
+import Magnify from "./Magnify";
 
 export const ProductPhotos = () => {
   // desktop
@@ -35,7 +35,7 @@ export const ProductPhotos = () => {
   return (
     <div className="section sm:px-4 sm:py-8 sm:overflow-x-hidden">
       <div>
-        <h1 className="pb-8 text-base mt-4 pl-4 sm:text-xl font-bold ">
+        <h1 className="pb-8 text-base mt-4 pl-10 sm:text-xl font-bold ">
           {textHeader} &gt; {menu}
         </h1>
       </div>
@@ -51,27 +51,12 @@ export const ProductPhotos = () => {
               controls
             />
           ) : (
-            <div className="w-[80%]">
-              <ReactImageMagnify
-                enlargedImageContainerStyle={{ marginLeft: "10%" }} // Adjust the margin-left value as needed
-                className="bg-black"
-                enlargedImagePosition="over"
-                smallImage={{
-                  alt: "Product image",
-                  isFluidWidth: true,
-                  src: currentImageURL,
-                }}
-                largeImage={{
-                  src: currentImageURL,
-                  width: 700,
-                  height: 600,
-                }}
-                hoverDelayInMs={0}
-              />
+            <div>
+              <Magnify src={currentImageURL} />
             </div>
           )}
         </div>
-        <div className="flex flex-row mt-[10px] ml-0">
+        <div className="flex flex-row ml-0">
           <img
             className="w-24 h-24 cursor-pointer mr-4 zoom-image"
             src="/images/product/product_img_08.jpg"
