@@ -35,13 +35,13 @@ export const ProductPhotos = () => {
   return (
     <div className="section sm:px-4 sm:py-8 sm:overflow-x-hidden">
       <div>
-        <h1 className="pb-8 text-base mt-4 pl-10 sm:text-xl font-bold ">
+        <h1 className="pb-4 text-base mt-[1rem] pl-10 sm:text-xl font-bold ">
           {textHeader} &gt; {menu}
         </h1>
       </div>
 
       <div className="flex-col justify-center pl-4 hidden sm:flex">
-        <div className="main-container">
+        <div className="max-w-[450px] p-3 flex justify-center">
           {isVideoPlaying ? (
             <video
               className="object-cover h-full max-h-[510px] max-w-[450px] w-full"
@@ -51,12 +51,12 @@ export const ProductPhotos = () => {
               controls
             />
           ) : (
-            <div>
+            <div className="cursor-zoom-in rounded-full">
               <Magnify src={currentImageURL} />
             </div>
           )}
         </div>
-        <div className="flex flex-row ml-0">
+        <div className="flex flex-row mt-3 ml-4">
           <img
             className="w-24 h-24 cursor-pointer mr-4 zoom-image"
             src="/images/product/product_img_08.jpg"

@@ -1,10 +1,4 @@
-import {
-  Footer,
-  Header,
-  MobileCards,
-  Notification,
-  ProductPhotos,
-} from "../../components";
+import { Footer, Header, Notification, ProductPhotos } from "../../components";
 
 export const ProductItem = () => {
   return (
@@ -12,7 +6,6 @@ export const ProductItem = () => {
       <Notification />
       <Header />
       <ProductPhotos />
-      {/* <MobileCards /> */}
       <Footer />
     </div>
   );
