@@ -35,7 +35,7 @@ export const ProductPhotos = () => {
   return (
     <div className="section sm:px-4 sm:py-8 sm:overflow-x-hidden">
       <div>
-        <h1 className="pb-4 text-base mt-[1rem] pl-10 sm:text-xl font-bold ">
+        <h1 className="pb-4 text-base mt-[1rem] pl-4 sm:pl-10 sm:text-xl font-bold ">
           {textHeader} &gt; {menu}
         </h1>
       </div>
