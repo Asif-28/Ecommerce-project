@@ -42,27 +42,32 @@ export const MobileCards = () => {
   };
 
   return (
-    <div className="section h-[350px] flex overflow-x-scroll">
-      <div className=" relative flex flex-row gap-3 overflow-x-scroll overflow-y-clip cont ml-3 pr-3">
-        {images.map((i) => (
-          <div className="min-w-[260px] max-w-[280px]" key={i.id}>
-            {renderMedia(i)}
+    <div className="section flex overflow-x-scroll">
+      <div className="">
+        {!zoomedImage ? (
+          <div className="relative flex flex-row gap-3 overflow-x-scroll overflow-y-clip cont ml-3 pr-3">
+            {images.map((i) => (
+              <div className="min-w-[260px] max-w-[280px]" key={i.id}>
+                {renderMedia(i)}
+              </div>
+            ))}
           </div>
-        ))}
+        ) : (
+          <div className=" w-full  px-4">
+            <button
+              className="float-right text-white pr-4 mb-2"
+              onClick={() => handleCloseZoom()}
+            >
+              <CloseIcon sx={{ color: "black", fontSize: "2.5rem" }} />
+            </button>
+            <img src={zoomedImage} alt="" className="object-contain" />
+          </div>
+        )}
       </div>
-
-      {/* Zoomed image */}
-      {zoomedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
-          <img src={zoomedImage} alt="" className="max-w-full max-h-full" />
-          <button
-            className="absolute top-5 right-5 text-white d"
-            onClick={() => handleCloseZoom()}
-          >
-            <CloseIcon sx={{ color: "white", fontSize: "2.5rem" }} />
-          </button>
-        </div>
-      )}
     </div>
   );
 };
+
+// {zoomedImage && (
+
+// )}
