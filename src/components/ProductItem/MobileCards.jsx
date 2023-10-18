@@ -45,7 +45,7 @@ export const MobileCards = () => {
   const { menu } = useContext(ProductContext);
   return (
     <div className="section">
-      <div className="">
+      <div className="min-h-[370px]">
         {!zoomedImage ? (
           <div>
             <h1 className="pb-4 text-base mt-[1rem] pl-4 sm:pl-10 font-bold ">
@@ -61,7 +61,7 @@ export const MobileCards = () => {
             </div>
           </div>
         ) : (
-          <div className=" w-full  px-4">
+          <div className=" w-full px-4 transition-all ease-in-out duration-200">
             <button
               className="float-right text-white pr-4 mb-2 mt-2"
               onClick={() => handleCloseZoom()}
