@@ -1,5 +1,4 @@
 import "./index.scss";
-import "./App.css";
 // import Homepage from "./pages/HomePage/Homepage";
 // import Products from "./pages/ProductsPage/Products";
 import CartContextProvider from "./context/CartContextProvider";
