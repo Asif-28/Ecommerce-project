@@ -83,7 +83,7 @@ function ImageMagnifier({
 const Magnify = ({ src }) => {
   return (
     <div className="App">
-      <ImageMagnifier width={"400px"} src={src} />
+      <ImageMagnifier width={"400px"} height={"510px"} src={src} />
     </div>
   );
 };
