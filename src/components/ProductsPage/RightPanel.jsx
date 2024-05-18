@@ -147,14 +147,12 @@ export const RightPanel = () => {
         </div> */}
 
         {/* Mobile Product Cards  */}
-        <div
-          onClick={() => {
-            navigate(`/products/1`);
-          }}
-          className="item flex flex-col py-4 px-2"
-        >
+        <div className="item flex flex-col py-4 px-2">
           {filteredProducts.map((item) => (
             <div
+              onClick={() => {
+                navigate(`/products/1`);
+              }}
               key={item.id}
               className="card-size flex items-center transition-all ease-linear shadow-md hover:shadow-lg gap-4 mb-2 rounded-md pl-2 pr-3 py-2"
             >
