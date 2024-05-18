@@ -1,7 +1,16 @@
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useNavigate } from "react-router-dom";
+
 export const ProductCard = ({ brand, name, price }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="mr-[1rem]">
+    <div
+      onClick={() => {
+        navigate(`/products`);
+      }}
+      className="mr-[1rem]"
+    >
       <div className="card cursor-pointer">
         <div className="image relative">
           <img

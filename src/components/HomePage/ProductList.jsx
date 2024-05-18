@@ -8,6 +8,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import products from "../../data/dummyProducts";
 import { useContext } from "react";
 import SearchContext from "../../context/SearchContext";
+import { useNavigate } from "react-router-dom";
 
 export const ProductList = () => {
   const { searchText } = useContext(SearchContext);

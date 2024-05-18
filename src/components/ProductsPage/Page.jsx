@@ -1,6 +1,5 @@
 import { LeftPanel } from "./LeftPanel";
 import { RightPanel } from "./RightPanel";
-
 export const Page = () => {
   return (
     <div className="section">

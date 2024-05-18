@@ -90,7 +90,7 @@ export const LeftPanel = () => {
     "Gucci",
     "Versace",
     "Puma",
-    "adibas",
+    "Adibas",
   ];
   const all = "All";
 

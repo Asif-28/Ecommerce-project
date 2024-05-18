@@ -4,7 +4,9 @@ import { useContext, useState } from "react";
 import "./Card.scss";
 import ProductContext from "../../context/ProductsContext";
 
+import { useNavigate } from "react-router-dom";
 export const RightPanel = () => {
+  const navigate = useNavigate();
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -78,7 +80,12 @@ export const RightPanel = () => {
           </div>
         </div>
         {/* Desktop Products Cards  */}
-        <div className="item flex flex-col py-8">
+        <div
+          onClick={() => {
+            navigate(`/products/1`);
+          }}
+          className="item flex flex-col py-8"
+        >
           {displayedProducts.map((item) => (
             <div
               key={item.id}
