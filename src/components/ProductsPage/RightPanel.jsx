@@ -147,7 +147,12 @@ export const RightPanel = () => {
         </div> */}
 
         {/* Mobile Product Cards  */}
-        <div className="item flex flex-col py-4 px-2">
+        <div
+          onClick={() => {
+            navigate(`/products/1`);
+          }}
+          className="item flex flex-col py-4 px-2"
+        >
           {filteredProducts.map((item) => (
             <div
               key={item.id}

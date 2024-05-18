@@ -10,7 +10,7 @@ const Products = () => {
           <Notification />
           <Header />
           <Page />
-          {/* <UpArrow/> */}
+          <UpArrow />
           <Footer />
         </ProductContextProvider>
       </SearchContextProvider>
